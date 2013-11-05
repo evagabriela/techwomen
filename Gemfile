@@ -8,6 +8,7 @@ gem 'rest-client'
 gem 'json'
 
 gem 'twitter'
+gem 'activeadmin'
 
 
 group :development, :test do
