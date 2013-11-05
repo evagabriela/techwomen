@@ -1,10 +1,12 @@
 source 'https://rubygems.org'
 
 gem 'rails', '3.2.14'
-gem 'bootstrap-sass', '2.1' 
+gem 'bootstrap-sass', '2.1'
+gem 'devise'
 # gem 'event_calendar', "~> 0.0.2"
 gem 'rest-client'
 gem 'json'
+
 
 group :development, :test do
   gem 'rspec-rails', '2.11.0'
@@ -35,3 +37,4 @@ end
 group :production do
   gem 'pg'
 end
+

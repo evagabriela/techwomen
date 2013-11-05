@@ -1463,10 +1463,10 @@ Served asset /static_pages.js - 304 Not Modified (0ms)
 Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-11-04 13:24:29 -0800
 Served asset /users.js - 304 Not Modified (0ms)
 Connecting to database specified by database.yml
-  [1m[36m (0.1ms)[0m  [1mselect sqlite_version(*)[0m
-  [1m[35m (1.3ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
-  [1m[36m (1.1ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
-  [1m[35m (0.1ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
 
 
 Started GET "/" for 127.0.0.1 at 2013-11-04 14:48:14 -0800
@@ -2197,4 +2197,181 @@ Served asset /jquery.js - 304 Not Modified (0ms)
 
 
 Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-11-04 17:46:51 -0800
+=======
+>>>>>>> master
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (3.9ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+  [1m[35m (2.1ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.6ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to DeviseCreateUsers (20131104215459)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (4.4ms)[0m  [1mCREATE TABLE "users" ("id" serial primary key, "email" character varying(255) DEFAULT '' NOT NULL, "encrypted_password" character varying(255) DEFAULT '' NOT NULL, "reset_password_token" character varying(255), "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" timestamp, "last_sign_in_at" timestamp, "current_sign_in_ip" character varying(255), "last_sign_in_ip" character varying(255), "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35m (1.1ms)[0m  CREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")
+  [1m[36m (1.0ms)[0m  [1mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [1m[35m (0.6ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20131104215459')
+  [1m[36m (0.8ms)[0m  [1mCOMMIT[0m
+Migrating to DeviseCreateAdmins (20131104215507)
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36m (5.3ms)[0m  [1mCREATE TABLE "admins" ("id" serial primary key, "email" character varying(255) DEFAULT '' NOT NULL, "encrypted_password" character varying(255) DEFAULT '' NOT NULL, "reset_password_token" character varying(255), "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" timestamp, "last_sign_in_at" timestamp, "current_sign_in_ip" character varying(255), "last_sign_in_ip" character varying(255), "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35m (1.4ms)[0m  CREATE UNIQUE INDEX "index_admins_on_email" ON "admins" ("email")
+  [1m[36m (1.6ms)[0m  [1mCREATE UNIQUE INDEX "index_admins_on_reset_password_token" ON "admins" ("reset_password_token")[0m
+  [1m[35m (0.6ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20131104215507')
+  [1m[36m (0.9ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2013-11-04 14:49:06 -0800
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (5.6ms)
+Compiled custom.css  (1836ms)  (pid 1970)
+Compiled application.css  (1ms)  (pid 1970)
+Compiled jquery.js  (49ms)  (pid 1970)
+Compiled jquery_ujs.js  (0ms)  (pid 1970)
+Compiled application.js  (80ms)  (pid 1970)
+  Rendered layouts/_shim.html.erb (0.4ms)
+  Rendered layouts/_header.html.erb (1.2ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 2018ms (Views: 2017.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2013-11-04 14:49:09 -0800
+Served asset /custom.css - 200 OK (11ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-11-04 14:49:09 -0800
+Served asset /users.css - 200 OK (4ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-04 14:49:09 -0800
+Served asset /jquery.js - 200 OK (2ms)
+
+
+Started GET "/assets/static_pages.css?body=1" for 127.0.0.1 at 2013-11-04 14:49:09 -0800
+Served asset /static_pages.css - 200 OK (2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-04 14:49:09 -0800
+Served asset /jquery_ujs.js - 200 OK (2ms)
+
+
+Started GET "/assets/static_pages.js?body=1" for 127.0.0.1 at 2013-11-04 14:49:09 -0800
+Served asset /static_pages.js - 200 OK (2ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-11-04 14:49:09 -0800
+Served asset /users.js - 200 OK (2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-11-04 14:50:28 -0800
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (1.1ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 9ms (Views: 8.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2013-11-04 14:50:28 -0800
+Served asset /custom.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/static_pages.css?body=1" for 127.0.0.1 at 2013-11-04 14:50:28 -0800
+Served asset /static_pages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-11-04 14:50:28 -0800
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-04 14:50:28 -0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-04 14:50:28 -0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/static_pages.js?body=1" for 127.0.0.1 at 2013-11-04 14:50:28 -0800
+Served asset /static_pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-11-04 14:50:28 -0800
+>>>>>>> origin/master
+Served asset /users.js - 304 Not Modified (0ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2013-11-04 17:55:11 -0800
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (1.9ms)
+  Rendered layouts/_shim.html.erb (0.2ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 57ms (Views: 56.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2013-11-04 17:55:11 -0800
+Served asset /custom.css - 304 Not Modified (29ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-04 17:55:11 -0800
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-11-04 17:55:11 -0800
+Served asset /users.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/static_pages.css?body=1" for 127.0.0.1 at 2013-11-04 17:55:11 -0800
+Served asset /static_pages.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-04 17:55:11 -0800
+Served asset /jquery_ujs.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/static_pages.js?body=1" for 127.0.0.1 at 2013-11-04 17:55:11 -0800
+Served asset /static_pages.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-11-04 17:55:11 -0800
+Served asset /users.js - 304 Not Modified (1ms)
+
+
+Started GET "/calendar" for 127.0.0.1 at 2013-11-04 17:55:14 -0800
+Processing by CalendarController#index as HTML
+  Rendered calendar/index.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 1051ms (Views: 33.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2013-11-04 17:55:15 -0800
+Served asset /custom.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-04 17:55:15 -0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/static_pages.css?body=1" for 127.0.0.1 at 2013-11-04 17:55:15 -0800
+Served asset /static_pages.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-11-04 17:55:15 -0800
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-04 17:55:15 -0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/static_pages.js?body=1" for 127.0.0.1 at 2013-11-04 17:55:15 -0800
+Served asset /static_pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-11-04 17:55:15 -0800
 Served asset /users.js - 304 Not Modified (0ms)
