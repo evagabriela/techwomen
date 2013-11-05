@@ -1,1 +1,9 @@
-HELLO
+<p>
+<% @results['results'].each do |event| %>
+    Group: <%= event['group']['name']  %><br>
+    Event: <%= event['name']  %><br>
+    Venue: <%= event['venue']['name'] %><br>
+    Date: <%= Time.at((event['time'])/1000.0) %><br>
+    <hr>
+  <% end %>
+</p>
