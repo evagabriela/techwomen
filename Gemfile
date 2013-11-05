@@ -7,6 +7,8 @@ gem 'devise'
 gem 'rest-client'
 gem 'json'
 
+gem 'twitter'
+
 
 group :development, :test do
   gem 'rspec-rails', '2.11.0'
