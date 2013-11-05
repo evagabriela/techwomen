@@ -2306,3 +2306,163 @@ Processing by UsersController#new as HTML
   Rendered layouts/_footer.html.erb (0.3ms)
 Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.0ms)
   [1m[35m (0.1ms)[0m  rollback transaction
+Connecting to database specified by database.yml
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+Started GET "/" for 127.0.0.1 at 2013-11-05 12:54:52 -0800
+Processing by HomeController#index as HTML
+  Rendered layouts/_shim.html.erb (0.3ms)
+  Rendered layouts/_header.html.erb (1.4ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 56ms (Views: 55.7ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.4ms)[0m  ROLLBACK
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+Started GET "/" for 127.0.0.1 at 2013-11-05 12:54:53 -0800
+Processing by HomeController#index as HTML
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (0.9ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 3ms (Views: 2.9ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+Started GET "/" for 127.0.0.1 at 2013-11-05 12:54:53 -0800
+Processing by HomeController#index as HTML
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 3ms (Views: 2.7ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+Started GET "/signup" for 127.0.0.1 at 2013-11-05 12:54:53 -0800
+Processing by UsersController#new as HTML
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (2.0ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 8ms (Views: 7.8ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.4ms)[0m  ROLLBACK
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+Started GET "/signup" for 127.0.0.1 at 2013-11-05 12:54:53 -0800
+Processing by UsersController#new as HTML
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+PGError: ERROR:  relation "users" does not exist
+LINE 5:              WHERE a.attrelid = '"users"'::regclass
+                                        ^
+:             SELECT a.attname, format_type(a.atttypid, a.atttypmod),
+                     pg_get_expr(d.adbin, d.adrelid), a.attnotnull, a.atttypid, a.atttypmod
+              FROM pg_attribute a LEFT JOIN pg_attrdef d
+                ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+             WHERE a.attrelid = '"users"'::regclass
+               AND a.attnum > 0 AND NOT a.attisdropped
+             ORDER BY a.attnum
+
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+PGError: ERROR:  relation "users" does not exist
+LINE 5:              WHERE a.attrelid = '"users"'::regclass
+                                        ^
+:             SELECT a.attname, format_type(a.atttypid, a.atttypmod),
+                     pg_get_expr(d.adbin, d.adrelid), a.attnotnull, a.atttypid, a.atttypmod
+              FROM pg_attribute a LEFT JOIN pg_attrdef d
+                ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+             WHERE a.attrelid = '"users"'::regclass
+               AND a.attnum > 0 AND NOT a.attisdropped
+             ORDER BY a.attnum
+
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+PGError: ERROR:  relation "users" does not exist
+LINE 5:              WHERE a.attrelid = '"users"'::regclass
+                                        ^
+:             SELECT a.attname, format_type(a.atttypid, a.atttypmod),
+                     pg_get_expr(d.adbin, d.adrelid), a.attnotnull, a.atttypid, a.atttypmod
+              FROM pg_attribute a LEFT JOIN pg_attrdef d
+                ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+             WHERE a.attrelid = '"users"'::regclass
+               AND a.attnum > 0 AND NOT a.attisdropped
+             ORDER BY a.attnum
+
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+PGError: ERROR:  relation "users" does not exist
+LINE 5:              WHERE a.attrelid = '"users"'::regclass
+                                        ^
+:             SELECT a.attname, format_type(a.atttypid, a.atttypmod),
+                     pg_get_expr(d.adbin, d.adrelid), a.attnotnull, a.atttypid, a.atttypmod
+              FROM pg_attribute a LEFT JOIN pg_attrdef d
+                ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+             WHERE a.attrelid = '"users"'::regclass
+               AND a.attnum > 0 AND NOT a.attisdropped
+             ORDER BY a.attnum
+
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+Connecting to database specified by database.yml
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+PGError: ERROR:  relation "users" does not exist
+LINE 5:              WHERE a.attrelid = '"users"'::regclass
+                                        ^
+:             SELECT a.attname, format_type(a.atttypid, a.atttypmod),
+                     pg_get_expr(d.adbin, d.adrelid), a.attnotnull, a.atttypid, a.atttypmod
+              FROM pg_attribute a LEFT JOIN pg_attrdef d
+                ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+             WHERE a.attrelid = '"users"'::regclass
+               AND a.attnum > 0 AND NOT a.attisdropped
+             ORDER BY a.attnum
+
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+PGError: ERROR:  relation "users" does not exist
+LINE 5:              WHERE a.attrelid = '"users"'::regclass
+                                        ^
+:             SELECT a.attname, format_type(a.atttypid, a.atttypmod),
+                     pg_get_expr(d.adbin, d.adrelid), a.attnotnull, a.atttypid, a.atttypmod
+              FROM pg_attribute a LEFT JOIN pg_attrdef d
+                ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+             WHERE a.attrelid = '"users"'::regclass
+               AND a.attnum > 0 AND NOT a.attisdropped
+             ORDER BY a.attnum
+
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+PGError: ERROR:  relation "users" does not exist
+LINE 5:              WHERE a.attrelid = '"users"'::regclass
+                                        ^
+:             SELECT a.attname, format_type(a.atttypid, a.atttypmod),
+                     pg_get_expr(d.adbin, d.adrelid), a.attnotnull, a.atttypid, a.atttypmod
+              FROM pg_attribute a LEFT JOIN pg_attrdef d
+                ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+             WHERE a.attrelid = '"users"'::regclass
+               AND a.attnum > 0 AND NOT a.attisdropped
+             ORDER BY a.attnum
+
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+PGError: ERROR:  relation "users" does not exist
+LINE 5:              WHERE a.attrelid = '"users"'::regclass
+                                        ^
+:             SELECT a.attname, format_type(a.atttypid, a.atttypmod),
+                     pg_get_expr(d.adbin, d.adrelid), a.attnotnull, a.atttypid, a.atttypmod
+              FROM pg_attribute a LEFT JOIN pg_attrdef d
+                ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+             WHERE a.attrelid = '"users"'::regclass
+               AND a.attnum > 0 AND NOT a.attisdropped
+             ORDER BY a.attnum
+
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  ROLLBACK

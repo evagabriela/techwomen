@@ -2783,3 +2783,149 @@ Connecting to database specified by database.yml
 Migrating to DeviseCreateUsers (20131104215459)
 Migrating to AddAdminToUsers (20131105203933)
   [1m[35m (0.4ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (3.9ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+  [1m[35m (1.5ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.5ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to DeviseCreateUsers (20131104215459)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (3.9ms)[0m  [1mCREATE TABLE "users" ("id" serial primary key, "email" character varying(255) DEFAULT '' NOT NULL, "encrypted_password" character varying(255) DEFAULT '' NOT NULL, "reset_password_token" character varying(255), "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" timestamp, "last_sign_in_at" timestamp, "current_sign_in_ip" character varying(255), "last_sign_in_ip" character varying(255), "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35m (1.1ms)[0m  CREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")
+  [1m[36m (0.9ms)[0m  [1mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [1m[35m (0.5ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20131104215459')
+  [1m[36m (0.9ms)[0m  [1mCOMMIT[0m
+Migrating to AddAdminToUsers (20131105203933)
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36m (6.0ms)[0m  [1mALTER TABLE "users" ADD COLUMN "admin" boolean DEFAULT 'f'[0m
+  [1m[35m (0.4ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20131105203933')
+  [1m[36m (1.0ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2013-11-05 13:02:48 -0800
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (3.6ms)
+  Rendered layouts/_shim.html.erb (0.4ms)
+  Rendered layouts/_header.html.erb (2.0ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 80ms (Views: 79.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2013-11-05 13:02:48 -0800
+Served asset /custom.css - 304 Not Modified (9ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-05 13:02:48 -0800
+Served asset /jquery_ujs.js - 304 Not Modified (34ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-05 13:02:48 -0800
+Served asset /jquery.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/static_pages.css?body=1" for 127.0.0.1 at 2013-11-05 13:02:48 -0800
+Served asset /static_pages.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-11-05 13:02:48 -0800
+Served asset /users.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/static_pages.js?body=1" for 127.0.0.1 at 2013-11-05 13:02:48 -0800
+Served asset /static_pages.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-11-05 13:02:48 -0800
+Served asset /users.js - 304 Not Modified (1ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2013-11-05 13:02:51 -0800
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered users/shared/_links.erb (1.3ms)
+  Rendered users/registrations/new.html.erb within layouts/application (10.6ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 85ms (Views: 18.7ms | ActiveRecord: 6.7ms)
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2013-11-05 13:02:51 -0800
+Served asset /custom.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-05 13:02:51 -0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-11-05 13:02:51 -0800
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/static_pages.css?body=1" for 127.0.0.1 at 2013-11-05 13:02:51 -0800
+Served asset /static_pages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/static_pages.js?body=1" for 127.0.0.1 at 2013-11-05 13:02:51 -0800
+Served asset /static_pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-05 13:02:51 -0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-11-05 13:02:51 -0800
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2013-11-05 13:02:58 -0800
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"q/g10VL1HQo6xbRSWwbjblEoF5nVd4Ovi9f3j8QlTmM=", "user"=>{"email"=>"test@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[36m (0.4ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (1.6ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'test@gmail.com' LIMIT 1
+  [1m[36mSQL (3.5ms)[0m  [1mINSERT INTO "users" ("admin", "created_at", "current_sign_in_at", "current_sign_in_ip", "email", "encrypted_password", "last_sign_in_at", "last_sign_in_ip", "remember_created_at", "reset_password_sent_at", "reset_password_token", "sign_in_count", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["admin", false], ["created_at", Tue, 05 Nov 2013 21:02:58 UTC +00:00], ["current_sign_in_at", nil], ["current_sign_in_ip", nil], ["email", "test@gmail.com"], ["encrypted_password", "$2a$10$eCav5r9VO4xhwVlGyb9CrO0wIYmGveSNjfwv1OPUGJf/cmJqKNus."], ["last_sign_in_at", nil], ["last_sign_in_ip", nil], ["remember_created_at", nil], ["reset_password_sent_at", nil], ["reset_password_token", nil], ["sign_in_count", 0], ["updated_at", Tue, 05 Nov 2013 21:02:58 UTC +00:00]]
+  [1m[35m (0.6ms)[0m  COMMIT
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.7ms)[0m  UPDATE "users" SET "last_sign_in_at" = '2013-11-05 21:02:58.686251', "current_sign_in_at" = '2013-11-05 21:02:58.686251', "last_sign_in_ip" = '127.0.0.1', "current_sign_in_ip" = '127.0.0.1', "sign_in_count" = 1, "updated_at" = '2013-11-05 21:02:58.687448' WHERE "users"."id" = 1
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 189ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-11-05 13:02:58 -0800
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  [1m[35mUser Load (0.7ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  Rendered layouts/_header.html.erb (11.7ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 19ms (Views: 18.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2013-11-05 13:02:58 -0800
+Served asset /custom.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/static_pages.css?body=1" for 127.0.0.1 at 2013-11-05 13:02:58 -0800
+Served asset /static_pages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-11-05 13:02:58 -0800
+Served asset /users.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-05 13:02:58 -0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/static_pages.js?body=1" for 127.0.0.1 at 2013-11-05 13:02:58 -0800
+Served asset /static_pages.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-05 13:02:58 -0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-11-05 13:02:58 -0800
+Served asset /users.js - 304 Not Modified (0ms)
