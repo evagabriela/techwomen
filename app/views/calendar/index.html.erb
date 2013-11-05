@@ -1,1 +1,6 @@
-HELLO
+<p>
+<% @results['results'].each do |n| %>
+    Event: <%= n['name']  %><br>
+    Venue: <%= n['venue']['name'] %><br>
+  <% end %>
+</p>

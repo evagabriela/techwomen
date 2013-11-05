@@ -1,7 +1,7 @@
 class CalendarController < ApplicationController
   
   def index
-    Calendar.fetch
+    @results = Calendar.fetch
   end
 
 end
