@@ -1,15 +1,14 @@
 SampleApp::Application.routes.draw do
-
-  devise_for :admins
   devise_for :users
-  
+  devise_for :admins
+
   root to:'home#index'
 
   match '/signup', to: 'users#new'
 
   resources :calendar
-  
- 
+
+
   # match '/help',    to: 'static_pages#help'
   # match '/about',   to: 'static_pages#about'
   # match '/contact', to: 'static_pages#contact'

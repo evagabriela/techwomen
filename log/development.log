@@ -2756,3 +2756,18 @@ Served asset /users.js - 304 Not Modified (0ms)
 
 Started GET "/assets/static_pages.js?body=1" for 127.0.0.1 at 2013-11-05 12:15:46 -0800
 Served asset /static_pages.js - 304 Not Modified (0ms)
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (2.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to DeviseCreateUsers (20131104215459)
+Migrating to DeviseCreateAdmins (20131104215507)
+Migrating to AddAdminToUsers (20131105203933)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (32.2ms)[0m  [1mALTER TABLE "users" ADD COLUMN "admin" boolean DEFAULT 'f'[0m
+  [1m[35m (1.8ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20131105203933')
+  [1m[36m (1.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
