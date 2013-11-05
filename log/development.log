@@ -2378,3 +2378,120 @@ Served asset /users.js - 304 Not Modified (0ms)
 
 Connecting to database specified by database.yml
 
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2013-11-05 12:08:36 -0800
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (5.5ms)
+Compiled custom.css  (890ms)  (pid 809)
+Compiled application.css  (3ms)  (pid 809)
+Compiled application.js  (20ms)  (pid 809)
+  Rendered layouts/_shim.html.erb (0.4ms)
+  Rendered layouts/_header.html.erb (1.7ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 1086ms (Views: 1085.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2013-11-05 12:08:38 -0800
+Served asset /custom.css - 304 Not Modified (7ms)
+
+
+Started GET "/assets/static_pages.css?body=1" for 127.0.0.1 at 2013-11-05 12:08:38 -0800
+Served asset /static_pages.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-05 12:08:38 -0800
+Served asset /jquery.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-11-05 12:08:38 -0800
+Served asset /users.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-05 12:08:38 -0800
+Served asset /jquery_ujs.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/static_pages.js?body=1" for 127.0.0.1 at 2013-11-05 12:08:38 -0800
+Served asset /static_pages.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-11-05 12:08:38 -0800
+Served asset /users.js - 304 Not Modified (1ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2013-11-05 12:08:46 -0800
+Processing by Devise::SessionsController#new as HTML
+  Rendered /Users/chantalemmanuel/.rvm/gems/ruby-1.9.3-p448/gems/devise-3.1.1/app/views/devise/shared/_links.erb (1.4ms)
+  Rendered /Users/chantalemmanuel/.rvm/gems/ruby-1.9.3-p448/gems/devise-3.1.1/app/views/devise/sessions/new.html.erb within layouts/application (15.1ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 159ms (Views: 23.6ms | ActiveRecord: 49.2ms)
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2013-11-05 12:08:46 -0800
+Served asset /custom.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/static_pages.css?body=1" for 127.0.0.1 at 2013-11-05 12:08:46 -0800
+Served asset /static_pages.css - 304 Not Modified (34ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-05 12:08:46 -0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-05 12:08:46 -0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-11-05 12:08:46 -0800
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-11-05 12:08:46 -0800
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/static_pages.js?body=1" for 127.0.0.1 at 2013-11-05 12:08:46 -0800
+Served asset /static_pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2013-11-05 12:08:51 -0800
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered /Users/chantalemmanuel/.rvm/gems/ruby-1.9.3-p448/gems/devise-3.1.1/app/views/devise/shared/_links.erb (0.5ms)
+  Rendered /Users/chantalemmanuel/.rvm/gems/ruby-1.9.3-p448/gems/devise-3.1.1/app/views/devise/registrations/new.html.erb within layouts/application (4.9ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (0.9ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 17ms (Views: 15.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2013-11-05 12:08:51 -0800
+Served asset /custom.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/static_pages.css?body=1" for 127.0.0.1 at 2013-11-05 12:08:51 -0800
+Served asset /static_pages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-11-05 12:08:51 -0800
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-05 12:08:51 -0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-05 12:08:51 -0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/static_pages.js?body=1" for 127.0.0.1 at 2013-11-05 12:08:51 -0800
+Served asset /static_pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-11-05 12:08:51 -0800
+Served asset /users.js - 304 Not Modified (0ms)
