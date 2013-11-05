@@ -1,6 +1,8 @@
 <p>
 <% @results['results'].each do |n| %>
+    Group: <%= n['group']['name']  %><br>
     Event: <%= n['name']  %><br>
     Venue: <%= n['venue']['name'] %><br>
+    <hr>
   <% end %>
 </p>
