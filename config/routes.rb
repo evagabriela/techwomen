@@ -1,17 +1,18 @@
 SampleApp::Application.routes.draw do
+
   devise_for :admins
-
   devise_for :users
-
-  get "users/new"
-
-  root to:'static_pages#home'
+  
+  root to:'home#index'
 
   match '/signup', to: 'users#new'
+
+  resources :calendar
+  
  
-  match '/help',    to: 'static_pages#help'
-  match '/about',   to: 'static_pages#about'
-  match '/contact', to: 'static_pages#contact'
+  # match '/help',    to: 'static_pages#help'
+  # match '/about',   to: 'static_pages#about'
+  # match '/contact', to: 'static_pages#contact'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
