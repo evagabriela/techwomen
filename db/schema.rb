@@ -43,6 +43,8 @@ ActiveRecord::Schema.define(:version => 20131107191523) do
     t.datetime "updated_at",                                :null => false
     t.string   "username"
     t.string   "location"
+    t.string   "company"
+    t.string   "job_title"
     t.string   "technologies"
     t.text     "blerb"
     t.string   "facebook"
