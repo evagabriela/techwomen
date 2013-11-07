@@ -4,7 +4,9 @@ SampleApp::Application.routes.draw do
   devise_for :users
   root to:'home#index'
 
+# creating custom URIs for profile create and view paths that devise does not
   match '/signup', to: 'users#new'
+  match 'users/:id' => 'users#show'
 
   resources :calendar
 

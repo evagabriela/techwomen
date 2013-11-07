@@ -3889,7 +3889,7 @@ Connecting to database specified by database.yml
   [1m[36m (0.5ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
 Migrating to DeviseCreateUsers (20131104215459)
 Migrating to AddAdminToUsers (20131105203933)
-  [1m[35m (0.3ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+  [1m[35m (0.3ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations"
 Connecting to database specified by database.yml
 
 
@@ -3942,10 +3942,10 @@ Completed 500 Internal Server Error in 50ms
 
 ActionView::Template::Error (undefined method `username' for #<User:0x007fa2851a0ea8>):
     7:   <%= f.email_field :email, :autofocus => true %></div>
-    8: 
+    8:
     9:   <div><%= f.label :username %><br />
     10:   <%= f.text_field :username %></div>
-    11: 
+    11:
     12:   <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
     13:     <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
   app/views/users/registrations/edit.html.erb:10:in `block in _app_views_users_registrations_edit_html_erb___918754136857268291_70167997258760'
@@ -4011,10 +4011,10 @@ Completed 500 Internal Server Error in 7ms
 
 ActionView::Template::Error (undefined method `username' for #<User:0x007fa2853d1768>):
     7:   <%= f.email_field :email, :autofocus => true %></div>
-    8: 
+    8:
     9:    <div><%= f.label :username %><br />
     10:   <%= f.text_field :username %></div>
-    11: 
+    11:
     12:   <div><%= f.label :password %><br />
     13:   <%= f.password_field :password %></div>
   app/views/users/registrations/new.html.erb:10:in `block in _app_views_users_registrations_new_html_erb__4304002291395025430_70168007388640'
@@ -4040,7 +4040,7 @@ Migrating to AddAdminToUsers (20131105203933)
   [1m[36m (5.3ms)[0m  [1mALTER TABLE "users" ADD COLUMN "admin" boolean DEFAULT 'f'[0m
   [1m[35m (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20131105203933')
   [1m[36m (0.9ms)[0m  [1mCOMMIT[0m
-  [1m[35m (0.2ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+  [1m[35m (0.2ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations"
 Connecting to database specified by database.yml
 
 
@@ -4088,10 +4088,10 @@ Completed 500 Internal Server Error in 91ms
 
 ActionView::Template::Error (undefined method `username' for #<User:0x007f86cbf65208>):
     7:   <%= f.email_field :email, :autofocus => true %></div>
-    8: 
+    8:
     9:    <div><%= f.label :username %><br />
     10:   <%= f.text_field :username %></div>
-    11: 
+    11:
     12:   <div><%= f.label :password %><br />
     13:   <%= f.password_field :password %></div>
   app/views/users/registrations/new.html.erb:10:in `block in _app_views_users_registrations_new_html_erb__1127316541956032222_70108459714400'
@@ -4111,7 +4111,7 @@ Migrating to AddUsernameToUsers (20131105212300)
   [1m[36m (1.5ms)[0m  [1mALTER TABLE "users" ADD COLUMN "username" character varying(255)[0m
   [1m[35m (0.5ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20131105212300')
   [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
-  [1m[35m (0.3ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+  [1m[35m (0.3ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations"
 Connecting to database specified by database.yml
 
 
@@ -4954,7 +4954,7 @@ Migrating to DeviseCreateUsers (20131104215459)
 Migrating to AddAdminToUsers (20131105203933)
 Migrating to AddUsernameToUsers (20131105212300)
 Migrating to CreateActiveAdminComments (20131105213908)
-  [1m[35m (0.3ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+  [1m[35m (0.3ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations"
 Connecting to database specified by database.yml
 Connecting to database specified by database.yml
 
@@ -7597,3 +7597,150 @@ Served asset /active_admin.js - 304 Not Modified (12ms)
 Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-11-07 10:33:14 -0800
 Served asset /users.js - 304 Not Modified (51ms)
 Connecting to database specified by database.yml
+
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (1.3ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to DeviseCreateUsers (20131104215459)
+Migrating to CreateActiveAdminComments (20131105213908)
+Migrating to AddDetailsToUsers (20131107191523)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (2.1ms)[0m  [1mALTER TABLE "users" ADD COLUMN "username" character varying(255)[0m
+PGError: ERROR:  column "username" of relation "users" already exists
+: ALTER TABLE "users" ADD COLUMN "username" character varying(255)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+Connecting to database specified by database.yml
+  [1m[36m (0.5ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to DeviseCreateUsers (20131104215459)
+Migrating to CreateActiveAdminComments (20131105213908)
+Migrating to AddDetailsToUsers (20131107191523)
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.7ms)[0m  [1mALTER TABLE "users" ADD COLUMN "username" character varying(255)[0m
+PGError: ERROR:  column "username" of relation "users" already exists
+: ALTER TABLE "users" ADD COLUMN "username" character varying(255)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+Connecting to database specified by database.yml
+  [1m[36m (3.8ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+  [1m[35m (1.6ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.5ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to DeviseCreateUsers (20131104215459)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (3.6ms)[0m  [1mCREATE TABLE "users" ("id" serial primary key, "email" character varying(255) DEFAULT '' NOT NULL, "encrypted_password" character varying(255) DEFAULT '' NOT NULL, "reset_password_token" character varying(255), "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" timestamp, "last_sign_in_at" timestamp, "current_sign_in_ip" character varying(255), "last_sign_in_ip" character varying(255), "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35m (1.1ms)[0m  CREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")
+  [1m[36m (0.9ms)[0m  [1mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [1m[35m (0.6ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20131104215459')
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+Migrating to CreateActiveAdminComments (20131105213908)
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (3.1ms)[0m  [1mCREATE TABLE "active_admin_comments" ("id" serial primary key, "namespace" character varying(255), "body" text, "resource_id" character varying(255) NOT NULL, "resource_type" character varying(255) NOT NULL, "author_id" integer, "author_type" character varying(255), "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35m (0.9ms)[0m  CREATE INDEX "index_active_admin_comments_on_namespace" ON "active_admin_comments" ("namespace")
+  [1m[36m (0.9ms)[0m  [1mCREATE INDEX "index_active_admin_comments_on_author_type_and_author_id" ON "active_admin_comments" ("author_type", "author_id")[0m
+  [1m[35m (1.2ms)[0m  CREATE INDEX "index_active_admin_comments_on_resource_type_and_resource_id" ON "active_admin_comments" ("resource_type", "resource_id")
+  [1m[36m (0.4ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20131105213908')[0m
+  [1m[35m (0.6ms)[0m  COMMIT
+Migrating to AddDetailsToUsers (20131107191523)
+  [1m[36m (0.5ms)[0m  [1mBEGIN[0m
+  [1m[35m (1.0ms)[0m  ALTER TABLE "users" ADD COLUMN "username" character varying(255)
+  [1m[36m (0.3ms)[0m  [1mALTER TABLE "users" ADD COLUMN "location" character varying(255)[0m
+  [1m[35m (0.4ms)[0m  ALTER TABLE "users" ADD COLUMN "technologies" character varying(255)
+  [1m[36m (0.4ms)[0m  [1mALTER TABLE "users" ADD COLUMN "blerb" text[0m
+  [1m[35m (0.4ms)[0m  ALTER TABLE "users" ADD COLUMN "facebook" character varying(255)
+  [1m[36m (0.3ms)[0m  [1mALTER TABLE "users" ADD COLUMN "linkedin" character varying(255)[0m
+  [1m[35m (0.3ms)[0m  ALTER TABLE "users" ADD COLUMN "blog" character varying(255)
+  [1m[36m (0.4ms)[0m  [1mALTER TABLE "users" ADD COLUMN "github" character varying(255)[0m
+  [1m[35m (0.4ms)[0m  ALTER TABLE "users" ADD COLUMN "personal_site" character varying(255)
+  [1m[36m (0.4ms)[0m  [1mALTER TABLE "users" ADD COLUMN "other_site" character varying(255)[0m
+  [1m[35m (5.2ms)[0m  ALTER TABLE "users" ADD COLUMN "admin" boolean DEFAULT 'f'
+  [1m[36m (0.3ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20131107191523')[0m
+  [1m[35m (1.1ms)[0m  COMMIT
+  [1m[36m (0.4ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2013-11-07 11:22:56 -0800
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (5.8ms)
+  Rendered layouts/_shim.html.erb (0.3ms)
+  [1m[36mUser Load (1.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  Rendered layouts/_header.html.erb (75.2ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 194ms (Views: 187.2ms | ActiveRecord: 6.5ms)
+
+
+Started GET "/assets/active_admin.css?body=1" for 127.0.0.1 at 2013-11-07 11:22:57 -0800
+Served asset /active_admin.css - 304 Not Modified (12ms)
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2013-11-07 11:22:57 -0800
+Served asset /custom.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-07 11:22:57 -0800
+Served asset /jquery.js - 304 Not Modified (50ms)
+
+
+Started GET "/assets/static_pages.css?body=1" for 127.0.0.1 at 2013-11-07 11:22:57 -0800
+Served asset /static_pages.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-07 11:22:57 -0800
+Served asset /jquery_ujs.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-11-07 11:22:57 -0800
+Served asset /users.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery-ui.js?body=1" for 127.0.0.1 at 2013-11-07 11:22:57 -0800
+Served asset /jquery-ui.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/active_admin/lib/namespace.js?body=1" for 127.0.0.1 at 2013-11-07 11:22:57 -0800
+Served asset /active_admin/lib/namespace.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/active_admin/components/jquery.aa.checkbox-toggler.js?body=1" for 127.0.0.1 at 2013-11-07 11:22:57 -0800
+Served asset /active_admin/components/jquery.aa.checkbox-toggler.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/active_admin/components/jquery.aa.dropdown-menu.js?body=1" for 127.0.0.1 at 2013-11-07 11:22:57 -0800
+Served asset /active_admin/components/jquery.aa.dropdown-menu.js - 304 Not Modified (7ms)
+
+
+Started GET "/assets/active_admin/components/jquery.aa.popover.js?body=1" for 127.0.0.1 at 2013-11-07 11:22:57 -0800
+Served asset /active_admin/components/jquery.aa.popover.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/active_admin/pages/application.js?body=1" for 127.0.0.1 at 2013-11-07 11:22:57 -0800
+Served asset /active_admin/pages/application.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/active_admin/components/jquery.aa.table-checkbox-toggler.js?body=1" for 127.0.0.1 at 2013-11-07 11:22:57 -0800
+Served asset /active_admin/components/jquery.aa.table-checkbox-toggler.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/active_admin/pages/batch_actions.js?body=1" for 127.0.0.1 at 2013-11-07 11:22:57 -0800
+Served asset /active_admin/pages/batch_actions.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/active_admin/application.js?body=1" for 127.0.0.1 at 2013-11-07 11:22:57 -0800
+Served asset /active_admin/application.js - 304 Not Modified (9ms)
+
+
+Started GET "/assets/active_admin/base.js?body=1" for 127.0.0.1 at 2013-11-07 11:22:57 -0800
+Served asset /active_admin/base.js - 304 Not Modified (16ms)
+
+
+Started GET "/assets/active_admin.js?body=1" for 127.0.0.1 at 2013-11-07 11:22:57 -0800
+Served asset /active_admin.js - 304 Not Modified (64ms)
+
+
+Started GET "/assets/static_pages.js?body=1" for 127.0.0.1 at 2013-11-07 11:22:57 -0800
+Served asset /static_pages.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-11-07 11:22:57 -0800
+Served asset /users.js - 304 Not Modified (1ms)
+>>>>>>> profiles
