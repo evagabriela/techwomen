@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131105213908) do
+ActiveRecord::Schema.define(:version => 20131107191523) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.string   "namespace"
@@ -41,8 +41,19 @@ ActiveRecord::Schema.define(:version => 20131105213908) do
     t.string   "last_sign_in_ip"
     t.datetime "created_at",                                :null => false
     t.datetime "updated_at",                                :null => false
-    t.boolean  "admin",                  :default => false
     t.string   "username"
+    t.string   "location"
+    t.string   "company"
+    t.string   "job_title"
+    t.string   "technologies"
+    t.text     "blerb"
+    t.string   "facebook"
+    t.string   "linkedin"
+    t.string   "blog"
+    t.string   "github"
+    t.string   "personal_site"
+    t.string   "other_site"
+    t.boolean  "admin",                  :default => false
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true

@@ -82,7 +82,7 @@ ActiveAdmin.setup do |config|
   #
   # This setting changes the method which Active Admin calls
   # to return the currently logged in user.
-  config.current_user_method = :current_user
+  config.current_user_method = :current_admin_user
 
 
   # == Logging Out
@@ -101,7 +101,8 @@ ActiveAdmin.setup do |config|
   # link. For example :get, :delete, :put, etc..
   #
   # Default:
-  config.logout_link_method = :destroy
+  config.logout_link_method = :delete
+
 
 
   # == Root
