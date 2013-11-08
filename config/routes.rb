@@ -8,7 +8,7 @@ SampleApp::Application.routes.draw do
   match '/signup', to: 'users#new'
   match 'users/:id' => 'users#show'
 
-  resources :calendar
+  resources :event
 
 
   # match '/help',    to: 'static_pages#help'
