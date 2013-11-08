@@ -14,6 +14,6 @@ class User < ActiveRecord::Base
 
   def gravatar(size=120)
     hash = Digest::MD5.hexdigest(self.email.downcase)
-    "http://www.gravatar.com/avatar/#{hash}?s=#{size}"
+    "http://www.gravatar.com/avatar/#{hash}?s=#{size}&d=/assets/images/female_placeholder.jpg"
   end
 end
