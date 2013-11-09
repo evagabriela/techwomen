@@ -12,6 +12,7 @@ gem 'activeadmin'
 
 
 group :development, :test do
+  gem 'better_errors'
   gem 'rspec-rails', '2.11.0'
   gem 'guard-rspec', '1.2.1'
   gem 'guard-spork', '1.2.0'
