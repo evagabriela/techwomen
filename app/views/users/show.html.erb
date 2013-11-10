@@ -1,12 +1,28 @@
-<%= image_tag @user.gravatar %> <br />
-<%= @user.username %> <br />
-<%= @user.company %> <br />
-<%= @user.job_title %> <br />
-<%= @user.technologies %> <br />
-<%= @user.blerb %> <br />
-<%= @user.facebook %> <br />
-<%= @user.linkedin %> <br />
-<%= @user.blog %> <br />
-<%= @user.github %> <br />
-<%= @user.personal_site %> <br />
-<%= @user.other_site %> <br />
+<div id="show_profile">
+  <%= image_tag @user.gravatar %> <br />
+  <h4>Username</h4>
+  <%= @user.username %> <br />
+  <h4>Company</h4>
+  <%= @user.company %> <br />
+  <h4>Job Title</h4>
+  <%= @user.job_title %> <br />
+  <h4>Technologies</h4>
+  <%= @user.technologies %> <br />
+  <h4>Blerb</h4>
+  <%= @user.blerb %> <br />
+
+  <h3>Social Links</h4>
+    <!-- To be mapped to social link icons -->
+    <h4>Facebook</h4>
+    <%= @user.facebook %> <br />
+    <h4>LinkedIn</h4>
+    <%= @user.linkedin %> <br />
+    <h4>Blog</h4>
+    <%= @user.blog %> <br />
+    <h4>Github</h4>
+    <%= @user.github %> <br />
+    <h4>Personal Site</h4>
+    <%= @user.personal_site %> <br />
+    <h4>Other</h4>
+    <%= @user.other_site %> <br />
+  </div>

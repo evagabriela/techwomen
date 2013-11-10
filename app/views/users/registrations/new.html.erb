@@ -3,50 +3,52 @@
 <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
 <%= devise_error_messages! %>
 
-<div><%= f.label :email %>
-  <%= f.email_field :email, :autofocus => true %></div> <br>
+<div>
 
-  <div><%= f.label :username %>
-  <%= f.text_field :username %></div> <br>
+  <%= f.email_field :email, placeholder: "Email", :autofocus => true %></div> <br>
 
-    <div><%= f.label :password %>
-  <%= f.password_field :password %></div><br>
+  <div>
+  <%= f.text_field :username, placeholder: "Username"%></div> <br>
 
-  <div><%= f.label "Password Confirmation" %>
-  <%= f.password_field :password_confirmation %></div><br>
+    <div>
+  <%= f.password_field :password, placeholder: "Password" %></div><br>
 
-  <div><%= f.label "City" %>
-  <%= f.text_field :location %></div><br>
+  <div>
+  <%= f.password_field :password_confirmation, placeholder: "Password Confirmation" %></div><br>
 
-  <div><%= f.label :company %>
-  <%= f.text_field :company %></div><br>
+  <div>
+  <%= f.text_field :location, placeholder: "City"  %></div><br>
 
-  <div><%= f.label "Job Title" %>
-  <%= f.text_field :job_title %></div><br>
+  <div>
+  <%= f.text_field :company, placeholder: "Company" %></div><br>
 
-  <div><%= f.label :technologies %>
-  <%= f.text_field :technologies %></div><br>
+  <div>
+  <%= f.text_field :job_title, placeholder: "Job Title" %></div><br>
 
-  <div><%= f.label "Tell us about yourself" %>
-  <%= f.text_area :blerb %></div><br>
+  <div>
+  <%= f.text_field :technologies, placeholder: "Technologies i.e. Ruby, Java, Python...." %></div><br>
 
-  <div><%= f.label :facebook %>
-  <%= f.url_field :facebook %></div><br>
+  <div>
+  <%= f.text_area :blerb, placeholder: "Tell us about yourself..."  %></div><br>
 
-  <div><%= f.label :linkedin %>
-  <%= f.url_field :linkedin %></div><br>
+  <h4>Social Networks</h4>
+  <div>
+  <%= f.url_field :facebook, placeholder: "Facebook" %></div><br>
 
-  <div><%= f.label :blog %>
-  <%= f.url_field :blog %></div><br>
+  <div>
+  <%= f.url_field :linkedin, placeholder: "LinkedIn"%></div><br>
 
-  <div><%= f.label :github %>
-  <%= f.url_field :github %></div><br>
+  <div>
+  <%= f.url_field :blog, placeholder: "Blog" %></div><br>
 
-  <div><%= f.label :personal_site %>
-  <%= f.url_field :personal_site %></div><br>
+  <div>
+  <%= f.url_field :github, placeholder: "Github"  %></div><br>
 
-  <div><%= f.label :other_site %>
-  <%= f.url_field :other_site %></div><br>
+  <div>
+  <%= f.url_field :personal_site, placeholder: "Personal Site" %></div><br>
+
+  <div>
+  <%= f.url_field :other_site, placeholder: "Other Site" %></div><br>
 
   <div><%= f.submit "Sign up" %></div>
   <% end %>
