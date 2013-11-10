@@ -20,6 +20,7 @@ group :development, :test do
   gem 'childprocess', '0.3.9'
   gem 'spork', '0.9.2'
   gem 'pg'
+  gem 'faker'
 end
 
 
