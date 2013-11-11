@@ -1,6 +1,6 @@
 require 'rest-client'
 
-class Calendar
+class Event
 
   attr_reader :attributes
 
