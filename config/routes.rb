@@ -5,11 +5,11 @@ SampleApp::Application.routes.draw do
   root to:'home#index'
 
 # creating custom URIs for profile create and view paths that devise does not
-  match '/signup', to: 'users#new'
-  match 'users/:id' => 'users#show'
+match '/signup', to: 'users#new'
+match 'users/:id' => 'users#show'
 
-  resources :event
-
+resources :event
+resources :career_path
 
   # match '/help',    to: 'static_pages#help'
   # match '/about',   to: 'static_pages#about'

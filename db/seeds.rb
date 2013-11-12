@@ -21,7 +21,7 @@ when "development"
     job_title = Faker::Name.title
     technologies = "Ruby, Python, Javascript, HTML5, CSS"
     blerb = Faker::Lorem.paragraph(random_sentences_to_add = 5)
-    facebook = Faker::Internet.url,
+    facebook = Faker::Internet.url
     linkedin = Faker::Internet.url
     blog = Faker::Internet.url
     github = Faker::Internet.url
@@ -35,10 +35,20 @@ when "development"
 
   admin1.toggle!(:admin)
 
+5.times do
+  job_title = Faker::Name.title
+  description = Faker::Lorem.paragraph(random_sentences_to_add = 3)
+  day_in_the_life = Faker::Lorem.paragraph(random_sentences_to_add = 3)
+
+
+  CareerPath.create!(job_title: job_title,
+    salary_range: "$70,000 - $100,000",
+    description: description,
+    day_in_the_life: day_in_the_life)
+end
+
 when "production"
- CareerPath.create!(job_title: ,
-salary_range: ,
-:description: ,
-:day_in_the_life: )
+
+
 
 end
