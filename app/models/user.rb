@@ -16,6 +16,6 @@ class User < ActiveRecord::Base
     hash = Digest::MD5.hexdigest(self.email.downcase)
     # add &d= and the file path to the image after s=# to change default image
     "http://www.gravatar.com/avatar/#{hash}?s=#{size}"
-
   end
+
 end

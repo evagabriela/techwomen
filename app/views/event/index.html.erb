@@ -3,7 +3,7 @@
     Group: <%= event['group']['name']  %><br>
     Event: <%= event['name']  %><br>
     Venue: <%= event['venue']['name'] %><br>
-    Date: <%= Time.at((event['time'])/1000.0) %><br>
+    Date: <%= (Time.at(event['time'])/1000).to_datetime) %><br>
     <hr>
   <% end %>
 </p>
