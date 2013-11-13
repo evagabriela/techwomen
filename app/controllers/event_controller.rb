@@ -1,7 +1,11 @@
 class EventController < ApplicationController
   
   def index
-    @results = Event.fetch
+    @events = Event.all
+  end
+
+  def show
+    @event = Event.find(params[:id])
   end
 
 end

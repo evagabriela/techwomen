@@ -1,9 +1,3 @@
-<p>
-<% @results['results'].each do |event| %>
-    Group: <%= event['group']['name']  %><br>
-    Event: <%= event['name']  %><br>
-    Venue: <%= event['venue']['name'] %><br>
-    Date: <%= (Time.at(event['time'])/1000).to_datetime) %><br>
-    <hr>
-  <% end %>
-</p>
+<%= calendar @events, :start_day => :monday do |event| %>
+  <div><%= link_to event.title, event %></div>
+<% end %>
