@@ -1,0 +1,9 @@
+<p>
+<% @career_path.each do |career| %>
+    Job Title: <%= career.job_title  %><br>
+    Salary Range: <%= career.salary_range %><br>
+    Description: <%= career.description %><br>
+    Day in the Life: <%= career.day_in_the_life %><br>
+    <hr>
+  <% end %>
+</p>
