@@ -11,7 +11,9 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
+
 ActiveRecord::Schema.define(:version => 20131112013733) do
+
 
   create_table "active_admin_comments", :force => true do |t|
     t.string   "namespace"
@@ -28,6 +30,21 @@ ActiveRecord::Schema.define(:version => 20131112013733) do
   add_index "active_admin_comments", ["namespace"], :name => "index_active_admin_comments_on_namespace"
   add_index "active_admin_comments", ["resource_type", "resource_id"], :name => "index_active_admin_comments_on_resource_type_and_resource_id"
 
+
+  create_table "events", :force => true do |t|
+    t.string   "title"
+    t.datetime "start_time"
+    t.string   "location"
+    t.string   "group"
+    t.string   "category"
+    t.string   "address"
+    t.string   "description"
+    t.string   "link"
+    t.integer  "meetup_id"
+    t.integer  "price"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+
   create_table "career_paths", :force => true do |t|
     t.string   "job_title"
     t.string   "salary_range"
@@ -35,6 +52,7 @@ ActiveRecord::Schema.define(:version => 20131112013733) do
     t.string   "day_in_the_life"
     t.datetime "created_at",      :null => false
     t.datetime "updated_at",      :null => false
+
   end
 
   create_table "users", :force => true do |t|
