@@ -7,7 +7,6 @@ gem 'devise'
 gem "simple_calendar", "~> 0.1.9"
 gem 'rest-client'
 gem 'json'
-
 gem 'twitter'
 gem 'activeadmin'
 
