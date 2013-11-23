@@ -12,7 +12,7 @@ resources :event
 resources :career_path
 
   # match '/help',    to: 'static_pages#help'
-  # match '/about',   to: 'static_pages#about'
+  match '/about',   to: 'home#about'
   # match '/contact', to: 'static_pages#contact'
 
   # The priority is based upon order of creation:
