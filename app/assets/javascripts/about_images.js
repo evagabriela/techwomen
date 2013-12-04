@@ -1,36 +1,48 @@
 var gaby_image_src = {
-    topleft: "gaby2.jpg",
-    topright: "gaby3.jpg",
-    bottomleft: "gaby4.jpg",
-    bottomright: "gaby5.jpg"
+    topleft: "https://s3.amazonaws.com/TechWomen.us/gaby2.jpg",
+    topright: "https://s3.amazonaws.com/TechWomen.us/gaby3.jpg",
+    bottomleft: "https://s3.amazonaws.com/TechWomen.us/gaby4.jpg",
+    bottomright: "https://s3.amazonaws.com/TechWomen.us/gaby5.jpg"
 };
 
-$(.gaby_thumb).mousemove(function(event){
+var chantal_image_src = {
+    topleft: "https://s3.amazonaws.com/TechWomen.us/chantal_yoga.jpg",
+    topright: "https://s3.amazonaws.com/TechWomen.us/chantal_halloween.jpg",
+    bottomleft: "https://s3.amazonaws.com/TechWomen.us/chantalfishing.jpg",
+    bottomright: "https://s3.amazonaws.com/TechWomen.us/chantalgoogle"
+};
+
+$(document).mousemove(function(event){
+var wid = $(".chantal_thumb").width();
+console.log("width is" + wid);
+console.log("event is" + event);
     var mloc = {
         x: event.pageX,
         y: event.pageY
     };
 
+    console.log("x is " + mloc.x);
+    console.log("y is " + mloc.y);
     if(
-        (mloc.x >= 0 && mloc.x <= $(.gaby_thumb).width()/2) &&
-        (mloc.y >= 0 && mloc.y <= $(.gaby_thumb).height()/2)
+        (mloc.x >= 0 && mloc.x <= $(".chantal_thumb").width()/2) &&
+        (mloc.y >= 0 && mloc.y <= $(".chantal_thumb").height()/2)
     ){
-        $(".gaby_thumb").attr("src", gaby_image_src.topleft);
+        $(".chantal_thumb").attr("src", chantal_image_src.topleft);
     }else if(
-        (mloc.x >= $(.gaby_thumb).width()/2 && mloc.x <= $(.gaby_thumb).width()) &&
-        (mloc.y >= 0 && mloc.y <= $(.gaby_thumb).height()/2)
+        (mloc.x >= $(".chantal_thumb").width()/2 && mloc.x <= $(".chantal_thumb").width()) &&
+        (mloc.y >= 0 && mloc.y <= $(".chantal_thumb").height()/2)
     ){
-        $(".gaby_thumb").attr("src", gaby_image_src.topright);
+        $(".chantal_thumb").attr("src", chantal_image_src.topright);
     }else if(
-        (mloc.x >= 0 && mloc.x <= $(.gaby_thumb).width()/2) &&
-        (mloc.y >= $(.gaby_thumb).height()/2 && mloc.y <= $(.gaby_thumb).height())
+        (mloc.x >= 0 && mloc.x <= $(".chantal_thumb").width()/2) &&
+        (mloc.y >= $(".chantal_thumb").height()/2 && mloc.y <= $(".chantal_thumb").height())
     ){
-        $(".gaby_thumb").attr("src", gaby_image_src.bottomleft);
+        $(".chantal_thumb").attr("src", chantal_image_src.bottomleft);
     }else if(
-        (mloc.x >= $(.gaby_thumb).width()/2 && mloc.x <= $(.gaby_thumb).width()) &&
-        (mloc.y >= $(.gaby_thumb).height()/2 && mloc.y <= $(.gaby_thumb).height())
+        (mloc.x >= $(".chantal_thumb").width()/2 && mloc.x <= $(".chantal_thumb").width()) &&
+        (mloc.y >= $(".chantal_thumb").height()/2 && mloc.y <= $(".chantal_thumb").height())
     ){
-        $(".gaby_thumb").attr("src", gaby_image_src.bottomright);
+        $(".chantal_thumb").attr("src", chantal_image_src.bottomright);
     }
 
 });
